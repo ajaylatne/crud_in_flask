@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{ border-spacing: 10px; }
+        th, td{ padding: 5px; width: 10% }
+    </style>
+</head>
+<body>
+        <h3>Employee Information:</h3>
+        <table border="2px">
+                <thead>
+                    <tr>
+                        <th>Eid</th>
+                        <th>Ename</th>
+                        <th>Esal</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in obj %}
+                        <tr>
+                            <td>{{ employee.eid }}</td>
+                            <td>{{ employee.ename }}</td>
+                            <td>{{ employee.esal }}</td>
+                            <td>
+                                <a href="/update/{{ employee.eid }}">Update</a>
+                            </td>
+                            <td>
+                                <a href="/delete/{{ employee.eid }}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+</body>
+</html>

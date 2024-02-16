@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        button{
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 20px;
+         }
+    </style>
+</head>
+<body>
+        <h1>Home Page</h1>
+        <a href="{{ url_for( 'insert_view' ) }}"><button>Insert Records</button></a>
+        <a href="{{ url_for( 'show_view' ) }}"><button>Show Records</button></a>
+</body>
+</html>

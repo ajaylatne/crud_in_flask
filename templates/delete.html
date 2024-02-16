@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Page</title>
+</head>
+<body>
+            <form method="post">
+                <h3>Do you really wants to delete record of {{ obj.ename }}</h3>
+                <button>Yes</button>
+                <a href="{{ url_for('show_view') }}"><button type="button">No</button></a>
+            </form>
+</body>
+</html>
